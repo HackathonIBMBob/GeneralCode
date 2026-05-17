@@ -1,0 +1,92 @@
+.plan-table-wrapper {
+  overflow-x: auto;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border-subtle);
+}
+
+.plan-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+.plan-table thead tr {
+  background: var(--bg-overlay);
+}
+
+.plan-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.plan-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+  vertical-align: top;
+  color: var(--text-primary);
+}
+
+.plan-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.plan-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.row-num {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  width: 40px;
+}
+
+.file-cell {
+  font-size: 0.8rem;
+  color: var(--ibm-blue-light);
+  max-width: 220px;
+  word-break: break-all;
+}
+
+.change-cell {
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.effort-badge {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 20px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.effort-high,
+.effort-large {
+  background: rgba(255, 64, 64, 0.12);
+  color: var(--risk-critical);
+  border: 1px solid rgba(255, 64, 64, 0.25);
+}
+
+.effort-medium {
+  background: rgba(241, 194, 27, 0.1);
+  color: var(--risk-medium);
+  border: 1px solid rgba(241, 194, 27, 0.25);
+}
+
+.effort-low,
+.effort-small {
+  background: rgba(66, 190, 101, 0.1);
+  color: var(--risk-low);
+  border: 1px solid rgba(66, 190, 101, 0.25);
+}

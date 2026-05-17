@@ -1,0 +1,119 @@
+.results-phase {
+  justify-content: flex-start;
+  padding-top: 2.5rem;
+  padding-bottom: 4rem;
+}
+
+.results-wrapper {
+  width: 100%;
+  max-width: 860px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header */
+.results-header {
+  padding-bottom: 0.5rem;
+}
+
+.results-title-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.results-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--cyan-dim);
+  border: 1px solid rgba(0, 229, 160, 0.25);
+  border-radius: var(--radius-md);
+  flex-shrink: 0;
+}
+
+.results-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.2rem;
+}
+
+/* Stats row */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.4rem;
+  padding: 1.25rem 1.25rem;
+}
+
+.stat-icon {
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.stat-accent-blue .stat-icon { color: var(--ibm-blue-light); }
+.stat-accent-blue .stat-value { color: var(--ibm-blue-light); }
+
+.stat-accent-cyan .stat-icon { color: var(--cyan); }
+.stat-accent-cyan .stat-value { color: var(--cyan); }
+
+.stat-accent-red .stat-icon { color: var(--risk-critical); }
+.stat-accent-red .stat-value { color: var(--risk-critical); }
+
+.stat-accent-orange .stat-icon { color: var(--risk-high); }
+.stat-accent-orange .stat-value { color: var(--risk-high); }
+
+.stat-accent-green .stat-icon { color: var(--risk-low); }
+.stat-accent-green .stat-value { color: var(--risk-low); }
+
+/* Sections */
+.result-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arch-summary {
+  font-size: 0.9rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+/* Downloads */
+.downloads-card {
+  border-color: rgba(0, 229, 160, 0.15);
+  background: rgba(0, 229, 160, 0.03);
+}
+
+.download-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}

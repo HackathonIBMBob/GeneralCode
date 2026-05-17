@@ -1,0 +1,156 @@
+.analyzing-wrapper {
+  width: 100%;
+  max-width: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* Header */
+.analyzing-header {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.analyzing-orb {
+  position: relative;
+  width: 56px;
+  height: 56px;
+  flex-shrink: 0;
+}
+
+.orb-core {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(15, 98, 254, 0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(15, 98, 254, 0.3);
+}
+
+.orb-ring {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  border-top-color: var(--ibm-blue);
+  border-right-color: rgba(15, 98, 254, 0.3);
+  animation: spin 1.4s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.analyzing-title {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.dots {
+  display: inline-block;
+  width: 1.5ch;
+  color: var(--cyan);
+}
+
+/* Card */
+.analyzing-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.progress-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Steps */
+.steps-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.step-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  transition: background 0.2s;
+}
+
+.step-item.step-done {
+  opacity: 0.75;
+}
+
+.step-item.step-active {
+  background: rgba(15, 98, 254, 0.07);
+  border: 1px solid rgba(15, 98, 254, 0.15);
+  border-radius: var(--radius-md);
+}
+
+.step-item.step-pending {
+  opacity: 0.35;
+}
+
+.step-icon {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.step-label {
+  font-size: 0.9rem;
+  flex: 1;
+}
+
+.step-item.step-done .step-label {
+  color: var(--text-secondary);
+}
+
+.step-item.step-active .step-label {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.step-active-badge {
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ibm-blue-light);
+  background: rgba(15, 98, 254, 0.15);
+  padding: 2px 8px;
+  border-radius: 20px;
+  animation: pulse-opacity 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse-opacity {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.pulse-icon {
+  animation: pulse-opacity 1s ease-in-out infinite;
+  display: flex;
+}
+
+/* Footer */
+.analyzing-footer {
+  font-size: 0.7rem;
+  opacity: 0.35;
+  text-align: center;
+}

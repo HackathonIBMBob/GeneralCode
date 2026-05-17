@@ -1,0 +1,51 @@
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.75rem;
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(0, 229, 160, 0.35);
+  background: rgba(0, 229, 160, 0.07);
+  color: var(--cyan);
+  font-family: var(--font-sans);
+  font-size: 0.925rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-width: 260px;
+  justify-content: center;
+}
+
+.download-btn:hover:not(:disabled) {
+  background: rgba(0, 229, 160, 0.14);
+  border-color: rgba(0, 229, 160, 0.6);
+  box-shadow: 0 0 20px rgba(0, 229, 160, 0.15);
+  transform: translateY(-2px);
+}
+
+.download-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.download-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.download-btn-icon {
+  font-size: 1.1rem;
+}
+
+.download-spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(0, 229, 160, 0.3);
+  border-top-color: var(--cyan);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

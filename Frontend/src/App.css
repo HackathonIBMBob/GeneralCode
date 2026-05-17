@@ -1,0 +1,106 @@
+/* ── Phase stepper ───────────────────────────────────────────────────────── */
+.phase-stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.stepper-step {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  position: relative;
+  opacity: 0.35;
+  transition: opacity 0.25s;
+}
+
+.stepper-step.active {
+  opacity: 1;
+}
+
+.stepper-step.completed {
+  opacity: 0.6;
+}
+
+.stepper-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border-strong);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: var(--text-muted);
+  background: var(--bg-surface);
+  flex-shrink: 0;
+  transition: all 0.25s;
+}
+
+.stepper-step.active .stepper-dot {
+  border-color: var(--ibm-blue);
+  color: var(--ibm-blue-light);
+  background: rgba(15, 98, 254, 0.12);
+  box-shadow: 0 0 12px rgba(15, 98, 254, 0.3);
+}
+
+.stepper-step.completed .stepper-dot {
+  border-color: var(--cyan);
+  color: var(--cyan);
+  background: var(--cyan-dim);
+}
+
+.stepper-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.stepper-step.active .stepper-label {
+  color: var(--text-primary);
+}
+
+.stepper-line {
+  width: 28px;
+  height: 1px;
+  background: var(--border-subtle);
+  margin: 0 6px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .stepper-label { display: none; }
+  .stepper-line { width: 16px; }
+  .phase-stepper { gap: 0; }
+}
+
+/* ── Error banner ────────────────────────────────────────────────────────── */
+.error-banner {
+  padding: 0 1.5rem;
+  margin-top: 1rem;
+}
+
+.error-banner-inner {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0.875rem 1.25rem;
+  background: rgba(255, 64, 64, 0.08);
+  border: 1px solid rgba(255, 64, 64, 0.25);
+  border-radius: var(--radius-md);
+  color: #ff8080;
+  font-size: 0.9rem;
+}
+
+.error-banner-inner span {
+  flex: 1;
+}
+
+/* ── @keyframes used in App ──────────────────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
